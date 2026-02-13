@@ -1,11 +1,24 @@
-<h2>Lista de Compras</h2>
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Compras PWA</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Bem-vindo à Lista de Compras</h1>
+  <div class="menu">
+    <button onclick="location.href='compras.html'">Criar Lista de Compras</button>
+  </div>
 
-<div class="actions">
-  <input type="text" id="itemInput" placeholder="Adicionar artigo...">
-  <button onclick="adicionarItem()">Adicionar</button>
-  <button id="finalizarBtn" onclick="finalizarLista()" style="display:none;">Finalizar Lista</button>
-</div>
-
-<ul id="lista"></ul>
-
-<script src="js/compras.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('Service Worker registado'))
+        .catch(err => console.error('Erro ao registar Service Worker:', err));
+    }
+  </script>
+</body>
+</html>
