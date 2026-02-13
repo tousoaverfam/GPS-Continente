@@ -12,11 +12,29 @@ h1, h2 {
   text-align: center;
 }
 
+.logo-placeholder {
+  width: 150px;
+  height: 150px;
+  background-color: #fff0f0;
+  border: 2px dashed #E20613;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #E20613;
+}
+
 .menu, .actions {
   display: flex;
   flex-direction: column;
   gap: 15px;
   margin-top: 30px;
+}
+
+.spaced-buttons button {
+  margin-bottom: 15px; /* Mais espaçamento entre botões */
 }
 
 button {
@@ -70,6 +88,22 @@ li {
 li.comprado {
   text-decoration: line-through;
   opacity: 0.6;
+}
+
+.voltar-btn {
+  margin-top: 30px;
+  padding: 12px 25px;
+  border-radius: 50px;
+  background-color: #fff;
+  color: #E20613;
+  border: 2px solid #E20613;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.voltar-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.2);
 }
 
 .fade-in {
