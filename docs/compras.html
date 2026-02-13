@@ -2,26 +2,27 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lista de Compras</title>
+  <title>Criar Lista</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h2>Lista de Compras</h2>
 
-  <div class="actions spaced-buttons">
-    <input type="text" id="itemInput" placeholder="Adicionar artigo...">
-    <button onclick="adicionarItem()">Adicionar</button>
-  </div>
+<h2>Criar Lista de Compras</h2>
 
-  <ul id="lista"></ul>
+<div class="actions spaced">
+  <input type="text" id="itemInput" placeholder="Adicionar artigo...">
+  <button class="primary-btn" onclick="adicionarItem()">Adicionar</button>
+</div>
 
-  <!-- Botões alinhados à esquerda/direita -->
-  <div class="bottom-buttons">
-    <button class="voltar-btn" onclick="history.back()">Voltar</button>
-    <button id="finalizarBtn" onclick="finalizarLista()" style="display:none;">Finalizar Lista</button>
-  </div>
+<ul id="lista"></ul>
 
-  <script src="js/compras.js"></script>
+<div class="bottom-buttons">
+  <button class="secondary-btn" onclick="history.back()">Voltar</button>
+  <button id="finalizarBtn" class="primary-btn" style="display:none;" onclick="finalizarLista()">
+    Finalizar Lista
+  </button>
+</div>
+
+<script src="js/compras.js"></script>
 </body>
 </html>
