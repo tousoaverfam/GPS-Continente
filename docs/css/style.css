@@ -8,44 +8,42 @@ body {
   padding: 20px;
 }
 
+/* LOGO */
 .logo-placeholder {
-  width: 140px;
-  height: 140px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   border: 2px dashed #E20613;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
+/* MENU */
 .menu {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  margin-top: 30px;
+  gap: 25px;
+  margin-top: 40px;
 }
 
-.spaced {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
+/* BOTÕES */
 .primary-btn {
   background-color: #E20613;
   color: white;
   border: none;
   border-radius: 50px;
-  padding: 14px 28px;
+  padding: 18px 36px;
+  font-size: 18px; /* IGUAL EM TODOS */
   cursor: pointer;
-  transition: 0.3s ease;
-  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .primary-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+  transform: scale(1.07);
+  box-shadow: 0 14px 25px rgba(0,0,0,0.2);
 }
 
 .secondary-btn {
@@ -53,7 +51,8 @@ body {
   border: 2px solid #E20613;
   color: #E20613;
   border-radius: 50px;
-  padding: 12px 25px;
+  padding: 16px 30px;
+  font-size: 18px; /* IGUAL */
   cursor: pointer;
   transition: 0.3s ease;
 }
@@ -62,32 +61,57 @@ body {
   transform: scale(1.05);
 }
 
-.bottom-buttons {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 400px;
-  margin-top: 30px;
-}
-
+/* INPUT */
 input {
-  padding: 12px;
+  padding: 14px;
   border-radius: 25px;
   border: 1px solid #E20613;
-  width: 250px;
+  width: 260px;
+  font-size: 16px;
 }
 
+/* LISTAS */
 ul {
   list-style: none;
   padding: 0;
   width: 100%;
-  max-width: 400px;
+  max-width: 420px;
 }
 
 li {
   background: #fff0f0;
   border: 1px solid #E20613;
   border-radius: 25px;
-  padding: 10px 15px;
-  margin-bottom: 10px;
+  padding: 12px 18px;
+  margin-bottom: 12px;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: cascade 0.4s forwards;
 }
+
+/* CASCATA */
+@keyframes cascade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* BOTÕES INFERIORES */
+.bottom-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 420px;
+  margin-top: 35px;
+}
+
+/* BOTÃO ELIMINAR */
+.delete-container {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
