@@ -12,6 +12,10 @@ function adicionarItem() {
 
   const li = document.createElement('li');
   li.textContent = nome;
+
+  /* Delay progressivo para cascata */
+  li.style.animationDelay = artigos.length * 0.1 + "s";
+
   lista.appendChild(li);
 
   input.value = '';
