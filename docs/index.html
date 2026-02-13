@@ -3,28 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lista de Compras PWA</title>
+  <title>Lista de Compras</title>
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Placeholder para logo -->
-  <div class="logo-placeholder fade-in">
-    LOGO AQUI
+
+  <div class="logo-placeholder">
+    LOGO
   </div>
 
-  <h1>Bem-vindo à Lista de Compras</h1>
+  <h1>Lista de Compras</h1>
+
   <div class="menu">
-    <button onclick="location.href='compras.html'">Criar Lista de Compras</button>
+    <button class="primary-btn" onclick="location.href='compras.html'">
+      Criar Lista de Compras
+    </button>
+
+    <button class="primary-btn" onclick="location.href='minhas-listas.html'">
+      As minhas listas
+    </button>
+
+    <button class="primary-btn" onclick="location.href='escolher-navegacao.html'">
+      Navegação
+    </button>
   </div>
 
   <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js')
-        .then(() => console.log('Service Worker registado'))
-        .catch(err => console.error('Erro ao registar Service Worker:', err));
+    if ('serviceWorker' in navigator') {
+      navigator.serviceWorker.register('service-worker.js');
     }
   </script>
+
 </body>
 </html>
-
