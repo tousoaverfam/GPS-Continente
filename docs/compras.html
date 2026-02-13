@@ -9,13 +9,15 @@
 <body>
   <h2>Lista de Compras</h2>
 
-  <div class="actions">
+  <div class="actions spaced-buttons">
     <input type="text" id="itemInput" placeholder="Adicionar artigo...">
     <button onclick="adicionarItem()">Adicionar</button>
     <button id="finalizarBtn" onclick="finalizarLista()" style="display:none;">Finalizar Lista</button>
   </div>
 
   <ul id="lista"></ul>
+
+  <button class="voltar-btn" onclick="history.back()">Voltar</button>
 
   <script src="js/compras.js"></script>
 </body>
