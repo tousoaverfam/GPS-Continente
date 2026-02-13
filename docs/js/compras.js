@@ -1,25 +1,19 @@
-const lista = document.getElementById('lista');
-const input = document.getElementById('itemInput');
-const finalizarBtn = document.getElementById('finalizarBtn');
 let artigos = [];
 
-// Categorias (exemplo)
-const categorias = {
-  'Laticínios': ['Leite', 'Queijo', 'Iogurte'],
-  'Frutas': ['Maçã', 'Banana', 'Laranja'],
-  'Verduras': ['Alface', 'Tomate', 'Cenoura']
-};
-
 function adicionarItem() {
+  const input = document.getElementById('itemInput');
+  const lista = document.getElementById('lista');
+  const finalizarBtn = document.getElementById('finalizarBtn');
+
   const nome = input.value.trim();
   if (!nome) return;
 
-  artigos.push({nome, categoria: ''});
+  artigos.push({ nome });
 
   const li = document.createElement('li');
   li.textContent = nome;
-  li.classList.add('fade-in');
   lista.appendChild(li);
+
   input.value = '';
 
   if (artigos.length === 1) {
@@ -28,19 +22,16 @@ function adicionarItem() {
 }
 
 function finalizarLista() {
-  artigos.forEach(a => {
-    for (const cat in categorias) {
-      if (categorias[cat].includes(a.nome)) {
-        a.categoria = cat;
-        break;
-      }
-    }
-    if (!a.categoria) a.categoria = 'Outros';
+  const nomeLista = "Lista " + new Date().toLocaleString();
+
+  const listas = JSON.parse(localStorage.getItem('listas')) || [];
+
+  listas.push({
+    nome: nomeLista,
+    artigos: artigos
   });
 
-  artigos.sort((a, b) => a.categoria.localeCompare(b.categoria));
+  localStorage.setItem('listas', JSON.stringify(listas));
 
-  localStorage.setItem('listaFinal', JSON.stringify(artigos));
-
-  location.href = 'gps.html';
+  location.href = 'minhas-listas.html';
 }
