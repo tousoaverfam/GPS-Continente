@@ -2,38 +2,28 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lista de Compras</title>
-  <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <div class="logo-placeholder">
-    LOGO
-  </div>
+<div class="logo-placeholder">LOGO</div>
 
-  <h1>Lista de Compras</h1>
+<h1>Lista de Compras</h1>
 
-  <div class="menu">
-    <button class="primary-btn" onclick="location.href='compras.html'">
-      Criar Lista de Compras
-    </button>
+<div class="menu">
+  <button class="primary-btn" onclick="location.href='compras.html'">
+    Nova Lista de Compras
+  </button>
 
-    <button class="primary-btn" onclick="location.href='minhas-listas.html'">
-      As minhas listas
-    </button>
+  <button class="primary-btn" onclick="location.href='minhas-listas.html'">
+    As Minhas Listas
+  </button>
 
-    <button class="primary-btn" onclick="location.href='escolher-navegacao.html'">
-      Navegação
-    </button>
-  </div>
-
-  <script>
-    if ('serviceWorker' in navigator') {
-      navigator.serviceWorker.register('service-worker.js');
-    }
-  </script>
+  <button class="primary-btn" onclick="location.href='escolher-navegacao.html'">
+    GPS
+  </button>
+</div>
 
 </body>
 </html>
