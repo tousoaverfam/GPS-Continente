@@ -12,12 +12,15 @@
   <div class="actions spaced-buttons">
     <input type="text" id="itemInput" placeholder="Adicionar artigo...">
     <button onclick="adicionarItem()">Adicionar</button>
-    <button id="finalizarBtn" onclick="finalizarLista()" style="display:none;">Finalizar Lista</button>
   </div>
 
   <ul id="lista"></ul>
 
-  <button class="voltar-btn" onclick="history.back()">Voltar</button>
+  <!-- Container para os botões de navegação -->
+  <div class="bottom-buttons">
+    <button class="voltar-btn" onclick="history.back()">Voltar</button>
+    <button id="finalizarBtn" onclick="finalizarLista()" style="display:none;">Finalizar Lista</button>
+  </div>
 
   <script src="js/compras.js"></script>
 </body>
